@@ -5,4 +5,5 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 # Run the python script using the venv's python executable
-"$SCRIPT_DIR/venv/bin/python" "$SCRIPT_DIR/etl_pipeline.py"
+PROJECT_ROOT="$SCRIPT_DIR/.."
+"$PROJECT_ROOT/venv/bin/python" "$PROJECT_ROOT/app/etl.py"

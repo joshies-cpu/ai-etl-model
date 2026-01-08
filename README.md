@@ -25,4 +25,10 @@ While currently a standalone software platform, this project is architected for 
 ## 📥 Getting Started
 1. Install Docker and Ollama.
 2. Run `docker compose up --build`.
-3. Open `http://localhost:8000`.gi
+3. Open `http://localhost:8000`.
+
+## 📂 Project Structure
+* `app/`: Source code (`main.py`, `etl.py`)
+* `scripts/`: Utility scripts (`debug_search.py`, `run.sh`)
+* `static/`: Frontend assets (`index.html`)
+* `data/`: PDF storage

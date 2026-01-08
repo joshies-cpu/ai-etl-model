@@ -8,7 +8,7 @@ from fastapi.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List, Set
-from etl_pipeline import process_pdf_by_page, load_to_chroma
+from .etl import process_pdf_by_page, load_to_chroma
 from pdfminer.high_level import extract_pages
 from pdfminer.layout import LTTextContainer
 
@@ -64,7 +64,7 @@ class ChatResponse(BaseModel):
 
 @app.get("/")
 async def serve_ui():
-    return FileResponse("index.html")
+    return FileResponse("static/index.html")
 
 @app.post("/upload")
 async def upload_pdf(file: UploadFile = File(...)):
